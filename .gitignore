@@ -1,0 +1,5 @@
+__init__.py
+data/
+__pycache__/
+.DS_Store
+.ipynb_checkpoints/
