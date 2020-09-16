@@ -7,8 +7,12 @@ import datetime
 import pandas as pd
 from modules.transform import format_date, base_returns
 import time
+import os 
 
-client_id = 'PU7ZSWNYV6GHUPP5UARLAONCEFVN3JHU'
+with open('../data/keys/tdameritradekey', 'r') as f:
+    os.environ['TDAMERITRADE'] = f.read()
+    
+client_id = os.environ.get('TDAMERITRADE')
 
 def load_set(stock, data_dir, tail):
     df = pd.read_pickle('{}{}{}.pickle'.format(data_dir, stock, tail))
