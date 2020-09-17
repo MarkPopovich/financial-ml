@@ -16,8 +16,9 @@
 
 [1.1 Load and Transform](1-ETL/1.1%20Load%20and%20Transform.ipynb)  
 [1.2 ETL For Top Performers](1-ETL/1.2%20ETL%20For%20Top%20Performers.ipynb)    
-[1.3 ETL for Minute Data 1 Month Top Return](1-ETL/1.3.1%20ETL%20for%20Minute%20Data%201%20Month%20Top%20Return.ipynb)
+[1.3 ETL for Minute Data 1 Month Top Return](1-ETL/1.3.1%20ETL%20for%20Minute%20Data%201%20Month%20Top%20Return.ipynb)  
 [1.4 Download SP500 Minute Data](1-ETL/1.4%20Download%20SP500%20Minute%20Data.ipynb)
+[1.5 Global Volume Dollar Bars](1-ETL/1.5%20Global%20Volume%20Dollar%20Bars.ipynb)
  
 #### 2.0 - Hypothesis Testing
 
@@ -26,6 +27,7 @@
 [2.3 Sine Regression in Macro and Micro Scope](2-Hypothesis-Testing/2.3%20Sine%20Regression%20in%20Macro%20and%20Micro%20Scope.ipynb)   
 [2.4 Naive Linear Regression on Top 100](2-Hypothesis-Testing/2.4%20Naive%20Linear%20Regression%20overlay%20on%20Top%20100%20Performers.ipynb)   
 [2.5 Hypothesis Testing](2-Hypothesis-Testing/2.5.2%20Hypothesis%20Testing.ipynb)
+[2.6 Augmented Dickey-Fuller Test for Stationarity](2-Hypothesis-Testing/2.6%20Augmented%20Dickey-Fuller%20Test%20for%20Stationarity.ipynb)  
 
 #### 3.0 - Feature Engineering
 
@@ -33,7 +35,8 @@
 [3.2 MESA Sine Wave Implementation](3-Feature-Engineering/3.2%20MESA%20Sine%20Wave%20Implementation.ipynb)    
 [3.3 Sine Wave Engineering in Multiple Dimensions](3-Feature-Engineering/3.3.1%20Sine%20Wave%20Feature%20Engineering%20in%20Multiple%20Dimensions.ipynb)  
 [3.4 Label Target Data](3-Feature-Engineering/3.4.1%20Label%20Target%20Data.ipynb)  
-[3.5 Construct X and y Matrices](3-Feature-Engineering/3.5.1%20Construct%20X%20and%20y%20Matrices.ipynb)
+[3.5 Construct X and y Matrices](3-Feature-Engineering/3.5.1%20Construct%20X%20and%20y%20Matrices.ipynb)  
+[3.6 Construct TFRecordDataset](3-Feature-Engineering/3.6%20Construct%20TFRecordDataset.ipynb)
 
 #### 4.0 - Modeling
  
@@ -47,3 +50,6 @@
 
 #### 5.0 - Production
 [5.1 Introduction to Production](5-Production/5.1%20Introduction%20to%20Production.ipynb)
+
+
+See [Captain's Log](https://docs.google.com/document/d/1jHjU1y-bR3a2WK5BO2tTyUSys-OYaMAjutxLcZBWRiQ/edit)
