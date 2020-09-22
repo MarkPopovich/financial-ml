@@ -3,3 +3,5 @@ data/
 __pycache__/
 .DS_Store
 .ipynb_checkpoints/
+modules/config.py
+modules/keys/*

@@ -1,6 +1,8 @@
 '''
 py file for functions interacting with TD Ameritrade API and extracting information
 '''
+import sys
+sys.path.append('/home/jovyan/work/modules/')
 
 import requests
 import datetime
@@ -8,11 +10,9 @@ import pandas as pd
 from modules.transform import format_date, base_returns
 import time
 import os 
-
-with open('../data/keys/tdameritradekey', 'r') as f:
-    os.environ['TDAMERITRADE'] = f.read()
+import config
     
-client_id = os.environ.get('TDAMERITRADE')
+client_id = config.TDAMERITRADE
 
 def load_set(stock, data_dir, tail):
     df = pd.read_pickle('{}{}{}.pickle'.format(data_dir, stock, tail))
@@ -71,7 +71,8 @@ def extract_stock(stock, data_dir=None, suffix='',
                   return_df=False, 
                   extended='true',
                   endDate=None,
-                  startDate=None):
+                  startDate=None,
+                  reverse=False):
     
     stock_data = get_history(stock, 
                              periodType=periodType, 
@@ -85,7 +86,8 @@ def extract_stock(stock, data_dir=None, suffix='',
     stock_df = format_date(stock_data)
     stock_df['SYMBOL'] = stock
     stock_df = base_returns(stock_df)
-    stock_df = stock_df.iloc[::-1]
+    if reverse == True:
+        stock_df = stock_df.iloc[::-1]
     # save as pickle
     if data_dir:
         stock_df.to_pickle('{}{}{}.pickle'.format(data_dir, stock, suffix))
@@ -141,3 +143,7 @@ def extract_multi_periods(stock, data_dir=None, suffix='',
         df.to_pickle('{}{}{}.pickle'.format(data_dir, stock, suffix))
         
     return df
+
+def continue_download(stock, data_dir, **kwargs):
+    pass
+    
