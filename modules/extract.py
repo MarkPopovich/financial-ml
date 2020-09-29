@@ -11,6 +11,7 @@ from modules.transform import format_date, base_returns
 import time
 import os 
 import config
+import time 
     
 client_id = config.TDAMERITRADE
 
@@ -144,6 +145,18 @@ def extract_multi_periods(stock, data_dir=None, suffix='',
         
     return df
 
-def continue_download(stock, data_dir, **kwargs):
-    pass
+
+
+def timing(start=None):
+    if start == None:
+        now_time = time.time()
+        print('Start time {}'.format(time.strftime('%c', time.localtime(now_time))))
+    else:
+        now_time = time.time()
+        elapsed = now_time - start
+        mins, secs = divmod(elapsed, 60)
+        hours, mins = divmod(mins, 60)
+        print(f'Time elapsed {hours} hours, {mins} minues, {secs} seconds')
+        print('Iteration start elapsed {}'.format(time.strftime('%c', time.localtime())))
+    return now_time
     

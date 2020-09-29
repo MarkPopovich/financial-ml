@@ -18,14 +18,18 @@ stream_client = StreamClient(client, account_id=None)
 async def read_stream():
     await stream_client.login()
     await stream_client.quality_of_service(StreamClient.QOSLevel.EXPRESS)
-    await stream_client.nasdaq_book_subs(['GOOG'])
-    await stream_client.level_one_equity_subs(['GOOG'])
+    # await stream_client.nasdaq_book_subs(['GOOG'])
+    await stream_client.timesale_equity_subs(['GOOG','AAPL','MSFT'])
+    # await stream_client.level_one_equity_subs(['GOOG','AAPL','MSFT'])
 
-    stream_client.add_level_one_equity_handler(
+    stream_client.add_timesale_equity_handler(
         lambda msg: print(json.dumps(msg, indent=4)))
 
-    stream_client.add_timesale_options_handler(
-            lambda msg: print(json.dumps(msg, indent=4)))
+    # stream_client.add_level_one_equity_handler(
+    #     lambda msg: print(json.dumps(msg, indent=4)))
+    #
+    # stream_client.add_timesale_options_handler(
+    #         lambda msg: print(json.dumps(msg, indent=4)))
 
     while True:
         await stream_client.handle_message()

@@ -3,5 +3,6 @@ data/
 __pycache__/
 .DS_Store
 .ipynb_checkpoints/
-modules/config.py
 modules/keys/*
+*/config.py
+1-ETL/pyscripts/secrets

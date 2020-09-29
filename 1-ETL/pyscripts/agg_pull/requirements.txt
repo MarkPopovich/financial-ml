@@ -1,0 +1,12 @@
+pandas>=1.1.2
+bs4
+numpy
+polygon-api-client
+pandas-market-calendars
+gcsfs
+google-cloud-storage
+lxml
+fsspec
+
+
+
